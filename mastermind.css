@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Times New Roman", Times, serif;
+  background-color: #202324;
+  color: rgb(255, 255, 255);
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  margin: 40px;
+  height: 100%;
+}
+.title {
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+  margin-bottom: 30px;
+}
+.yellow {
+  background-color: rgb(190, 190, 54);
+}
+.red {
+  background-color: rgb(255, 0, 0);
+}
+.green {
+  background-color: rgb(9, 255, 0);
+}
+.aqua {
+  background-color: aqua;
+}
+.turquoise {
+  background-color: rgb(17, 107, 107);
+}
+.purple {
+  background-color: purple;
+}
+.M,
+.A,
+.S,
+.T,
+.E,
+.R,
+.mind {
+  padding: 0 10px;
+}
+.mind {
+  padding: 0;
+  text-transform: uppercase;
+}
+.rules {
+  margin: 10px 0;
+}
+.rules-toggle {
+  cursor: pointer;
+}
+.rules-info {
+  margin: 5px 0;
+  width: 400px;
+  border: 1px solid rgb(255, 255, 255);
+  padding: 10px;
+}
+.gameboard {
+  width: 400px;
+
+  /* border: 1px solid white; */
+  display: flex;
+  flex-direction: row;
+}
+.play {
+  flex: 80;
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  align-items: baseline;
+  border: 1px solid rgb(41, 48, 48);
+}
+.row-btns {
+  flex: 50;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.btn {
+  margin-top: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgb(14, 22, 22);
+  /* background-color: inherit; */
+}
+.btn:hover {
+  cursor: pointer;
+}
+.done {
+  position: relative;
+  bottom: 20%;
+}
+.done:hover {
+  cursor: pointer;
+}
+.hints {
+  flex: 10%;
+  display: flex;
+  flex-flow: row wrap;
+
+  height: 50px;
+  position: relative;
+  bottom: 40%;
+  padding-top: 5px;
+  padding-left: 2.5px;
+  justify-content: space-between;
+  padding-right: 2.5px;
+}
+.hint {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid rgb(41, 48, 48);
+}
+.selectors {
+  margin-left: 10px;
+  flex: 10;
+}
+.selector {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-top: 10px;
+  border: none;
+  opacity: 0.1;
+}
+.selector:hover {
+  cursor: pointer;
+}
+.current {
+  border-color: rgb(255, 255, 255);
+}
+.selected {
+  border: 1px solid rgb(255, 255, 255);
+  opacity: 1;
+}
+.background {
+  background-color: #202324;
+}
+.right {
+  background-color: rgb(255, 255, 255);
+}
+.endgame {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  z-index: 1;
+  height: 150px;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+}
+.endgame-relative {
+  box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 40px 0px;
+  color: rgb(232, 230, 227);
+}
+.failure {
+  background-color: rgb(255, 0, 0);
+}
+.victory {
+  background-color: rgb(9, 255, 0);
+}
+.endgame-header {
+  font-size: 30px;
+  text-transform: uppercase;
+  padding: 20px;
+}
+.endgame-btn {
+  position: absolute;
+  top: 50%;
+  right: 40%;
+  border-color: rgb(140, 130, 115);
+  color: rgb(24, 26, 27);
+  font-weight: 400;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+}
+.endgame-btn:hover {
+  opacity: 0.5;
+}
+.endgame-overlay {
+  background-color: rgb(24, 26, 27);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  z-index: 2;
+}
+.hidden {
+  display: none;
+}

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="mastermind.css" />
+    <script defer src="mastermind.js"></script>
+    <title>MasterMind</title>
+    <div class="app">
+      <div class="heading">
+        <h1 class="title">
+          <span class="M yellow">M</span>
+          <span class="A red">A</span>
+          <span class="S green">S</span>
+          <span class="T aqua">T</span>
+          <span class="E turquoise">E</span>
+          <span class="R purple">R</span>
+          <span class="mind">mind</span>
+        </h1>
+      </div>
+      <div class="rules">
+        <h3 class="rules-toggle">Show Rules</h3>
+        <p class="rules-info hidden">
+          Try to guess the pattern, in both order and color, within ten turns.
+          After submitting a row, a small black peg is placed for each code peg
+          from the guess which is correct in both color and position. A white
+          peg indicates the existence of a correct color code peg placed in the
+          wrong position. More info on Wikipedia.
+        </p>
+      </div>
+      <div class="gameboard">
+        <div class="play">
+          <div class="row current" id="r1">
+            <div class="row-btns">
+              <button class="background btn r1"></button>
+              <button class="background btn r1"></button>
+              <button class="background btn r1"></button>
+              <button class="background btn r1"></button>
+            </div>
+            <div class="done hidden r1">✔️</div>
+            <div class="hints">
+              <span class="hint r1"></span>
+              <span class="hint r1"></span>
+              <span class="hint r1"></span>
+              <span class="hint r1"></span>
+            </div>
+          </div>
+          <div class="row" id="r2">
+            <div class="row-btns">
+              <button class="background btn r2"></button>
+              <button class="background btn r2"></button>
+              <button class="background btn r2"></button>
+              <button class="background btn r2"></button>
+            </div>
+            <div class="done hidden r2">✔️</div>
+            <div class="hints">
+              <span class="hint r2"></span>
+              <span class="hint r2"></span>
+              <span class="hint r2"></span>
+              <span class="hint r2"></span>
+            </div>
+          </div>
+          <div class="row" id="r3">
+            <div class="row-btns">
+              <button class="background btn r3"></button>
+              <button class="background btn r3"></button>
+              <button class="background btn r3"></button>
+              <button class="background btn r3"></button>
+            </div>
+            <div class="done hidden r3">✔️</div>
+            <div class="hints">
+              <span class="hint r3"></span>
+              <span class="hint r3"></span>
+              <span class="hint r3"></span>
+              <span class="hint r3"></span>
+            </div>
+          </div>
+          <div class="row" id="r4">
+            <div class="row-btns">
+              <button class="background btn r4"></button>
+              <button class="background btn r4"></button>
+              <button class="background btn r4"></button>
+              <button class="background btn r4"></button>
+            </div>
+            <div class="done hidden r4">✔️</div>
+            <div class="hints">
+              <span class="hint r4"></span>
+              <span class="hint r4"></span>
+              <span class="hint r4"></span>
+              <span class="hint r4"></span>
+            </div>
+          </div>
+          <div class="row" id="r5">
+            <div class="row-btns">
+              <button class="background btn r5"></button>
+              <button class="background btn r5"></button>
+              <button class="background btn r5"></button>
+              <button class="background btn r5"></button>
+            </div>
+            <div class="done hidden r5">✔️</div>
+            <div class="hints">
+              <span class="hint r5"></span>
+              <span class="hint r5"></span>
+              <span class="hint r5"></span>
+              <span class="hint r5"></span>
+            </div>
+          </div>
+          <div class="row" id="r6">
+            <div class="row-btns">
+              <button class="background btn r6"></button>
+              <button class="background btn r6"></button>
+              <button class="background btn r6"></button>
+              <button class="background btn r6"></button>
+            </div>
+            <div class="done hidden r6">✔️</div>
+            <div class="hints">
+              <span class="hint r6"></span>
+              <span class="hint r6"></span>
+              <span class="hint r6"></span>
+              <span class="hint r6"></span>
+            </div>
+          </div>
+          <div class="row" id="r7">
+            <div class="row-btns">
+              <button class="background btn r7"></button>
+              <button class="background btn r7"></button>
+              <button class="background btn r7"></button>
+              <button class="background btn r7"></button>
+            </div>
+            <div class="done hidden r7">✔️</div>
+            <div class="hints">
+              <span class="hint r7"></span>
+              <span class="hint r7"></span>
+              <span class="hint r7"></span>
+              <span class="hint r7"></span>
+            </div>
+          </div>
+          <div class="row" id="r8">
+            <div class="row-btns">
+              <button class="background btn r8"></button>
+              <button class="background btn r8"></button>
+              <button class="background btn r8"></button>
+              <button class="background btn r8"></button>
+            </div>
+            <div class="done hidden r8">✔️</div>
+            <div class="hints">
+              <span class="hint r8"></span>
+              <span class="hint r8"></span>
+              <span class="hint r8"></span>
+              <span class="hint r8"></span>
+            </div>
+          </div>
+          <div class="row" id="r9">
+            <div class="row-btns">
+              <button class="background btn r9"></button>
+              <button class="background btn r9"></button>
+              <button class="background btn r9"></button>
+              <button class="background btn r9"></button>
+            </div>
+            <div class="done hidden r9">✔️</div>
+            <div class="hints">
+              <span class="hint r9"></span>
+              <span class="hint r9"></span>
+              <span class="hint r9"></span>
+              <span class="hint r9"></span>
+            </div>
+          </div>
+          <div class="row" id="r10">
+            <div class="row-btns">
+              <button class="background btn r10"></button>
+              <button class="background btn r10"></button>
+              <button class="background btn r10"></button>
+              <button class="background btn r10"></button>
+            </div>
+            <div class="done hidden r10">✔️</div>
+            <div class="hints">
+              <span class="hint r10"></span>
+              <span class="hint r10"></span>
+              <span class="hint r10"></span>
+              <span class="hint r10"></span>
+            </div>
+          </div>
+        </div>
+        <div class="selectors">
+          <span class="selector yellow selected"></span>
+          <span class="selector red"></span>
+          <span class="selector green"></span>
+          <span class="selector aqua"></span>
+          <span class="selector turquoise"></span>
+          <span class="selector purple"></span>
+        </div>
+      </div>
+      <div class="cheat">
+        <!-- <span class="cheatcode">hello</span>
+        <span class="cheatcode">hello</span>
+        <span class="cheatcode">hello</span>
+        <span class="cheatcode">hello</span> -->
+      </div>
+      <div class="endgame hidden">
+        <div class="endgame-relative failure">
+          <h2 class="endgame-header"></h2>
+          <button class="endgame-btn">Play Again</button>
+        </div>
+      </div>
+      <div class="endgame-relative endgame-overlay hidden"></div>
+    </div>
+  </head>
+  <body></body>
+</html>
